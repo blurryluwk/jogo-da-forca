@@ -1,0 +1,20 @@
+<h1>Jogo da Forca</h1>
+
+<% if @game.status == 'in_progress' %>
+  <p><strong>Palavra:</strong> <%= @game.correct_guesses %></p>
+  <p><strong>Tentativas restantes:</strong> <%= @game.attempts_left %></p>
+
+  <%= form_with url: guess_game_path(@game), method: :post, local: true do |f| %>
+    <div>
+      <%= f.label :letra, "Tente adivinhar uma letra:" %>
+      <%= f.text_field :letra, maxlength: 1, autofocus: true, required: true %>
+    </div>
+
+    <%= f.submit "Adivinhar", class: 'btn btn-primary' %>
+  <% end %>
+
+  <%= link_to 'Voltar ao Menu', root_path, class: 'btn btn-secondary' %>
+<% elsif @game.finished? %>
+  <h2><%= @game.game_status %></h2>
+  <%= link_to 'Novo Jogo', games_path, class: 'btn btn-primary' %>
+<% end %>
