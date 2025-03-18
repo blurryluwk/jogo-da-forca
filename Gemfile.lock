@@ -101,9 +101,9 @@ GEM
     jbuilder (2.13.0)
       actionview (>= 5.0.0)
       activesupport (>= 5.0.0)
-    listen (3.0.8)
-      rb-fsevent (~> 0.9, >= 0.9.4)
-      rb-inotify (~> 0.9, >= 0.9.7)
+    listen (3.9.0)
+      rb-fsevent (~> 0.10, >= 0.10.3)
+      rb-inotify (~> 0.9, >= 0.9.10)
     logger (1.6.6)
     loofah (2.24.0)
       crass (~> 1.0.2)
@@ -260,7 +260,7 @@ DEPENDENCIES
   capybara (>= 3.26)
   chromedriver-helper
   jbuilder (~> 2.0)
-  listen (>= 3.0.5, < 3.2)
+  listen (>= 3.0.5, < 3.10)
   puma (~> 5.0)
   rails (~> 7.0.0)
   rails-controller-testing
