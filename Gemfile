@@ -16,7 +16,7 @@ end
 
 group :development do
   gem 'web-console'
-  gem 'listen', '>= 3.0.5', '< 3.2'
+  gem 'listen', '>= 3.0.5', '< 3.10'
   gem 'spring'
 end
 
